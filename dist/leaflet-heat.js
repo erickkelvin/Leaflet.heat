@@ -75,7 +75,7 @@
                 a = this._data[s],
                 i.globalAlpha = Math.max(a[2] / this._max, t || .05),
                 i.drawImage(this._circle, a[0] - this._r, a[1] - this._r);
-            if (this._width != 0 && this._height != 0) {
+            if (this._width > 0 && this._height > 0) {
                 var n = i.getImageData(0, 0, this._width, this._height);
                 return this._colorize(n.data, this._grad), i.putImageData(n, 0, 0), this
             }
